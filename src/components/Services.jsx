@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import TiltedCard from './annimations/TiledCard.jsx';
 
 const Services = () => {
   const servicesRef = useRef(null);
@@ -40,6 +41,7 @@ const Services = () => {
   return (
     <section id="services" ref={servicesRef} className="py-20 bg-[#0A0A0F]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -49,6 +51,8 @@ const Services = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className={`${service.bgColor} rounded-3xl p-8 relative overflow-hidden group hover:scale-105 transition-all duration-300`}
             >
+
+              
               <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                 <span className="text-xs font-medium">{service.number}</span>
               </div>
@@ -70,6 +74,7 @@ const Services = () => {
 
               {/* Mock UI Preview */}
               <div className="mt-8 relative">
+
                 <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-2 h-2 rounded-full bg-red-400"></div>

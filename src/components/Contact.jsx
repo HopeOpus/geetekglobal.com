@@ -18,12 +18,16 @@ const Contact = () => {
             Let's work with Us
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto mb-8">
-            Geetek Global is a biggest company in Indonesia, who provides the services in
-            Development Website, Shopify and App Development
+            We are here to help you build amazing company that can develop your company for the future with great UX and Clean Development.
           </p>
-          <button className="btn-primary">
-            Work Now
-          </button>
+          <a
+            href="https://wa.me/qr/Z7CRMVWRGRYRJ1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Contact Us Today
+          </a>
         </motion.div>
 
         {/* Company Logos */}

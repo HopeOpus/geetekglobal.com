@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useSpring, animated } from '@react-spring/web';
 import { ArrowRight } from 'lucide-react';
+import TiltedCard from './annimations/TiledCard';
 
 const About = () => {
   const aboutRef = useRef(null);
@@ -76,6 +77,9 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="glass-card max-w-4xl mx-auto"
         >
+          
+
+
           <h3 className="text-3xl font-light mb-8">
             Let's work together
             <br />
@@ -90,6 +94,7 @@ const About = () => {
           <button className="btn-primary">
             Get Started
           </button>
+         
         </motion.div>
       </div>
     </section>

@@ -6,15 +6,12 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">G</span>
-              </div>
-              <span className="text-xl font-bold text-white">Geetek</span>
+              <img src="./assets/logo.png" alt="Logo" className="w-7 h-15" />
+              <span className="text-white text-lg font-semibold">Geetek Global</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Geetek Global are you developing your
-              business for the future with great UX
-              and Clean design
+              Geetek Global your trusted partner for innovative digital solutions.
+              We specialize in web development, mobile app development, and digital marketing to help your business thrive
             </p>
             <div className="text-xs text-white/40">
               © 2024 Geetek Global. All rights reserved.

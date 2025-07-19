@@ -8,24 +8,60 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: 'MStore',
-      description: 'Geetek Global is a biggest company in Indonesia, who provides the services in Development Website, Shopify and App Development',
-      category: 'E-commerce'
+      title: 'Olaike Cooperative Management App',
+      description: 'Geetek Global built a comprehensive cooperative management app for Olaike, enhancing their operational efficiency and member engagement.',
+      category: 'Finance',
+      image: './assets/olaike.png',
+      link: 'https://olaikecoop.com.ng/' 
     },
     {
-      title: 'Beauty',
-      description: 'Geetek Global is a biggest company in Indonesia, who provides the services in Development Website, Shopify and App Development',
-      category: 'Beauty & Wellness'
+      title: 'GroceX (UK)',
+      description: 'Geetek Global developed GroceX, a cutting-edge e-commerce platform that revolutionizes grocery shopping with its user-friendly interface and seamless online experience.',
+      category: 'Beauty & Wellness',
+      image: './assets/groce.jpg',
+      link: 'https://grocex.co.uk/' 
     },
     {
-      title: 'Jual',
-      description: 'Geetek Global is a biggest company in Indonesia, who provides the services in Development Website, Shopify and App Development',
-      category: 'Marketplace'
+      title: 'Project Clothe A Child (USA)',
+      description: 'Geetek Global created a charitable platform for Clothe A Child, enabling them to efficiently manage donations and support underprivileged children.',
+      category: 'Marketplace',
+      image: './assets/cac.png',
+      link: 'https://clothe-a-child.kinibeenergy.com/' 
     },
     {
-      title: 'MangStore',
-      description: 'Geetek Global is a biggest company in Indonesia, who provides the services in Development Website, Shopify and App Development',
-      category: 'E-commerce'
+      title: 'BrandForgeX',
+      description: 'Geetek Global built a powerful brand management platform for BrandForgeX, streamlining their branding efforts and enhancing customer engagement.',
+      category: 'E-commerce',
+      image: './assets/bx.png',
+      link: 'https://www.brandforgex.com/' 
+    },
+     {
+      title: 'Eidinburg Wellness Management (EWM)',
+      description: 'Geetek Global built a comprehensive wellness management platform for EWM, enhancing their operational efficiency and member engagement.',
+      category: 'Beauty & Wellness',
+      image: './assets/ewm.png',
+      link: 'https://olaike.example.com' 
+    },
+    {
+      title: 'Torwood',
+      description: 'Geetek Global built a comprehensive platform for Torwood, enhancing their operational efficiency and member engagement.',
+      category: 'Marketplace',
+      image: './assets/torwood.png',
+      link: 'https://olaike.example.com' 
+    },
+    {
+      title: 'EasyCoop Cooperative Management App',
+      description: 'Geetek Global built a comprehensive cooperative management app for EasyCoop, enhancing their operational efficiency and member engagement.',
+      category: 'Finance',
+      image: './assets/easycoop.png',
+      link: 'http://easycoopng.com/' 
+    },
+    {
+      title: 'PouchApp',
+      description: 'Geetek Global built a comprehensive e-commerce platform for PouchApp, enhancing their operational efficiency and member engagement.',
+      category: 'E-commerce',
+      image: './assets/pouch.png',
+      link: 'https://getpouch.africa/' 
     }
   ];
 
@@ -40,7 +76,7 @@ const Portfolio = () => {
           className="flex justify-between items-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-light">
-            Our Product
+            Our Portfolio
           </h2>
           <button className="btn-outline">
             View More
@@ -75,9 +111,13 @@ const Portfolio = () => {
                   <div className="w-3 h-3 rounded-full bg-green-400"></div>
                 </div>
                 
-                <div className="bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg h-32 flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold text-white/80">{project.title}</span>
-                </div>
+                <div className="rounded-lg h-[202px] flex items-center justify-center mb-4 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 group-hover:brightness-110"
+                    />
+              </div>
                 
                 <div className="text-xs text-white/60 mb-2">{project.category}</div>
               </div>
@@ -89,8 +129,15 @@ const Portfolio = () => {
                   {project.description}
                 </p>
                 <button className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-accent transition-colors duration-200">
-                  Start project
-                  <ArrowRight size={14} />
+                  <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-accent transition-colors duration-200"
+                    >
+                      See project
+                      <ArrowRight size={14} />
+                  </a>
                 </button>
               </div>
             </motion.div>

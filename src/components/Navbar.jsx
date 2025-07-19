@@ -33,11 +33,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">G</span>
-            </div>
-            <span className="text-xl font-bold text-white">Geetek</span>
+          <div className="flex items-center space-x-2 size-10 mt-[30px]">
+            <img src="/assets/logo.png" alt="Logo" />
           </div>
 
           {/* Desktop Navigation */}
@@ -64,7 +61,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-primary transition-colors duration-200"
+              className="text-white  duration-200"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
